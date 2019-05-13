@@ -1,0 +1,11 @@
+version: "2"
+services:
+  web1:
+    build: ./web1
+    container_name: 0511_web1
+    volumes: 
+      - /web1flag:/flag
+      - ./web1/code/:/var/www/html  
+    restart: always
+    ports:
+      - "8000:80"
